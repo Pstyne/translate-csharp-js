@@ -89,9 +89,18 @@
 }
 public class Guest
 {
-  public string Name { get; set; }
-  public string Occupation { get; set; }
-  public string Bio { get; set; }
+  //? Code Sample: 
+  //* public string Name { get; set; }
+  
+  //? Warning: 
+  //! Non-nullable property 'Name' must contain a non-null 
+  //! value when exiting constructor. 
+  //! Consider declaring the property as nullable.
+  
+  //? Fix: 
+  public string Name { get; set; } = string.Empty;
+  public string Occupation { get; set; } = string.Empty;
+  public string Bio { get; set; } = string.Empty;
 }
 
 
